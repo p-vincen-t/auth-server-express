@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "es5", "es2015.promise"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "dist",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowJs": true,
+      "keyofStringsOnly": true
+    },
+    "include": [
+      "src/**/*.ts", "src/config/mail.js"
+    ],
+    "exclude": [
+      "node_modules"
+    ],
+    "skipLibCheck": true,
+    "types": [
+      // add node as an option
+      "node"
+   ],
+   // typeRoots option has been previously configured
+   "typeRoots": [
+      // add path to @types
+      "node_modules/@types"
+   ]
+  }

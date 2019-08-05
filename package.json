@@ -1,0 +1,73 @@
+{
+  "name": "nesst_auth",
+  "version": "1.0.0",
+  "description": "f4b auth server",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js",
+    "build": "export NODE_ENV=prod && gulp ",
+    "start:server": "export NODE_ENV=dev && ts-node src/index.ts",
+    "test": "export NODE_ENV=test && mocha --reporter spec -r ts-node/register 'test/**/*.test.ts'",
+    "test:watch": "export NODE_ENV=test && mocha --watch",
+    "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+  },
+  "keywords": [
+    "nesst"
+  ],
+  "author": "Peter Vincent",
+  "license": "MIT",
+  "proxy": "http://localhost:5001/",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/face4biz/backend/auth.git"
+  },
+  "copyright": "Copyright 2018 Nesst Peter Vincent",
+  "devDependencies": {
+    "@types/bcrypt": "*",
+    "@types/chai": "*",
+    "@types/chai-http": "3.0.5",
+    "@types/cors": "*",
+    "@types/debug": "0.0.30",
+    "@types/dotenv": "*",
+    "@types/express": "*",
+    "@types/jsonwebtoken": "*",
+    "@types/mocha": "*",
+    "@types/mongodb": "*",
+    "@types/mongoose": "*",
+    "@types/morgan": "*",
+    "@types/node": "*",
+    "@types/uuid": "*",
+    "chai": "*",
+    "chai-http": "*",
+    "cross-env": "*",
+    "gulp": "*",
+    "gulp-typescript": "*",
+    "mocha": "*",
+    "nodemon": "*",
+    "path": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "typings": "*"
+  },
+  "dependencies": {
+    "autoprefixer": "9.1.3",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "*",
+    "debug": "^4.1.1",
+    "del": "^5.0.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.6.6",
+    "morgan": "*",
+    "passport-local": "*",
+    "promise": "8.0.1",
+    "random-string": "*",
+    "reflect-metadata": "^0.1.13",
+    "uuid": "*"
+  }
+}

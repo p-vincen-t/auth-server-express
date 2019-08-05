@@ -1,0 +1,6 @@
+{
+    "url" : "mongodb://127.0.0.1:6871",
+    "db" : "f4b",
+    "collection" : "schema_migrations",
+    "directory" : "../db/migrations/"
+}
